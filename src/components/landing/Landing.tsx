@@ -84,7 +84,7 @@ export const Landing = () => {
                         'bg-black',
                         'text-white'
                     )}
-                    href={vscodeProjectLink}
+                    href={`${vscodeProjectLink}/README.md`}
                 >
                     <span className={clsx('text-lg')}>Read docs</span>
                     <img src="/media/landing/arrow.svg" alt="" />

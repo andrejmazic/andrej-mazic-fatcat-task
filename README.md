@@ -19,6 +19,15 @@ In the ***src/components*** folder, you will find several
 components. Your goal is to enhance these components with
 appropriate TypeScript interfaces and types.
 
+#### ✅How I achieved this:
+The initial step in migrating to TypeScript necessitated the addition of the **typescript** dependency to the [package.json](./package.json) file, along with the incorporation of the corresponding [tsconfig.json](./tsconfig.json) file.
+
+All **.jsx** and **.js** files were transformed into **.ts** and **.tsx** extensions, respectively. Simultaneously, the creation of prop types for components was undertaken.
+
+Concerning import aliases, modifications were made to the [vite.config.ts](./vite.config.ts) file. A new property, **alias**, was introduced within the **resolve** property, pointing to **./src/** and named as **@homework-task**. Additionally, the [tsconfig.json](./tsconfig.json) file saw the inclusion of **baseUrl** and **paths**.
+
+This process ensured a seamless transition to TypeScript while maintaining the integrity of the project structure.
+
 ### Create a List Component
 
 Develop a React component that is both scalable and reusable,
