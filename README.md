@@ -1,6 +1,7 @@
 ## Task Implementations
 1. [Transfer the project to TypeScript](#transfer-to-typescript-implementation)
 2. [List component](#list-component-implementation)
+3. [Form Generator component](#form-generator-component-implementation)
 
 ## Complete the following tasks
 
@@ -99,6 +100,37 @@ Component Example **(this does not have to be the exact implementation)**:
     )}
 />
 ```
+
+#### Form Generator Component Implementation:
+Files:
+* [FormGenerator.tsx](./src/components/FormGenerator.tsx)
+* [MyForm.tsx](./src/components/MyForm.tsx)
+
+Libraries:
+1. [@tanstack/react-query](https://www.npmjs.com/package/@tanstack/react-query) for API calls
+2. [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers) as form validation resolver
+3. [zod](https://www.npmjs.com/package/zod) for validation schemas
+4. [react-hook-form](https://www.npmjs.com/package/react-hook-form) for forms
+
+This solution leverages the capabilities of React Query, Zod, React Hook Form and React Hook Form Resolvers for efficient state management, form validation, and API interactions.
+
+**FormGenerator.tsx** component incorporates the capabilities outlined in the task description as following:
+
+***Validation Schema:***
+
+    The component accepts a validationSchema prop using the Zod library to define the validation rules for form data.
+
+***API Hook Call:***
+
+    The component uses the React Query library's useMutation hook to handle API calls and the states.
+
+***Callback Function for Form Rendering:***
+
+    The FormGenerator component accepts a renderForm callback function as a prop. This function is responsible for rendering the form elements using the provided register function for input bindings and errors for displaying validation errors.
+
+The [MyForm.tsx](./src/components/MyForm.tsx) component utilizes the FormGenerator component, it creates a form with two fields: a required title field with a maximum character limit and a required body field with a maximum character limit.
+
+Validation errors are displayed for both fields if the input doesn't meet the criteria set by the validation schema.
 
 
 ### Create a Page Generator Component

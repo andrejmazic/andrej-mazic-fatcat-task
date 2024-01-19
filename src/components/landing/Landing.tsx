@@ -21,7 +21,7 @@ const cards = [
     {
         title: 'Create a Form Generator Component',
         text: 'Build a versatile React component with validation, API hook, and form rendering capabilities. ',
-        link: vscodeProjectLink,
+        link: `${vscodeProjectLink}/src/components/FormGenerator.tsx`,
     },
     {
         title: 'Create a Page Generator Component',
