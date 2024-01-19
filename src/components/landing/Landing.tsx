@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 
-import { Card } from './Card.jsx';
+import {Card} from './Card';
 
 // eslint-disable-next-line no-undef
+// @ts-ignore
+// TODO: Check this ts-ignore
 const vscodeProjectLink = `vscode://file/${__CWD__}`;
 
 const cards = [
