@@ -11,12 +11,12 @@ const cards = [
     {
         title: 'Transfer the project to TypeScript',
         text: 'Your first task involves transitioning this project from JavaScript to TypeScript.',
-        link: vscodeProjectLink,
+        link: `${vscodeProjectLink}/README.md`,
     },
     {
         title: 'Create a scalable List Component',
         text: 'Build a scalable React component to fetch and display key information (id, name, username, email, and phone) from an API in a list format.',
-        link: vscodeProjectLink,
+        link: `${vscodeProjectLink}/src/components/List.tsx`,
     },
     {
         title: 'Create a Form Generator Component',

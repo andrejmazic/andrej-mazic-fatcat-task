@@ -1,3 +1,7 @@
+## Task Implementations
+1. [Transfer the project to TypeScript](#✅-transfer-to-typescript-implementation)
+2. [List component](#✅-list-component-implementation)
+
 ## Complete the following tasks
 
 ### Transfer the project to TypeScript
@@ -19,7 +23,7 @@ In the ***src/components*** folder, you will find several
 components. Your goal is to enhance these components with
 appropriate TypeScript interfaces and types.
 
-#### ✅How I achieved this:
+#### ✅ Transfer to TypeScript implementation:
 The initial step in migrating to TypeScript necessitated the addition of the **typescript** dependency to the [package.json](./package.json) file, along with the incorporation of the corresponding [tsconfig.json](./tsconfig.json) file.
 
 All **.jsx** and **.js** files were transformed into **.ts** and **.tsx** extensions, respectively. Simultaneously, the creation of prop types for components was undertaken.
@@ -37,6 +41,16 @@ https://jsonplaceholder.typicode.com/users. For each item
 in the list, ensure that the following keys are displayed:
 ***id***, ***name***, ***email***, ***dateOfBirth***, and ***phone***.
 
+#### ✅ List Component implementation:
+Files:
+* [List.tsx](./src/components/List.tsx)
+* [UserCard.tsx](./src/components/UserCard.tsx)
+
+It uses the **useEffect** hook to fetch data from the https://jsonplaceholder.typicode.com/users endpoint when the component mounts. The fetched data is stored in a state variable **users**.
+
+For each user in the users array, the component displays a **UserCard** component. The **UserCard** component is a separate, reusable component that receives a user object as a prop and displays the user's **id**, **name**, **username**, **email**, and **phone**.
+
+If there's an error during the fetch operation, the error message is stored in a state variable error and displayed to the user. Additionally, a loading state is implemented to signal an ongoing data request process, especially if it takes some time.
 
 ### Create a Form Generator Component
 
