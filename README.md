@@ -46,7 +46,7 @@ Files:
 * [List.tsx](./src/components/List.tsx)
 * [UserCard.tsx](./src/components/UserCard.tsx)
 
-It uses the **useEffect** hook to fetch data from the https://jsonplaceholder.typicode.com/users endpoint when the component mounts. The fetched data is stored in a state variable **users**.
+**List.tsx** component uses the **useEffect** hook to fetch data from the https://jsonplaceholder.typicode.com/users endpoint when the component mounts. The fetched data is stored in a state variable **users**.
 
 For each user in the users array, the component displays a **UserCard** component. The **UserCard** component is a separate, reusable component that receives a user object as a prop and displays the user's **id**, **name**, **username**, **email**, and **phone**.
 
