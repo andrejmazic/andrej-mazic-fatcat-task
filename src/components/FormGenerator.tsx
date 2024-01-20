@@ -14,11 +14,11 @@ type FormGeneratorProps = {
     }) => JSX.Element;
 }
 
-const FormGenerator = ({title = 'Custom Form', validationSchema, formOnSubmit, renderForm}: FormGeneratorProps) => {
+const FormGenerator = ({title, validationSchema, formOnSubmit, renderForm}: FormGeneratorProps) => {
 
     const {register, handleSubmit, formState: {errors}} = useForm({resolver: zodResolver(validationSchema)});
 
-    const {mutateAsync, isError, isPending, isSuccess, data} = useMutation({
+    const {mutateAsync, isError, isSuccess, data, status} = useMutation({
         mutationFn: formOnSubmit,
     });
 
@@ -31,16 +31,25 @@ const FormGenerator = ({title = 'Custom Form', validationSchema, formOnSubmit, r
     }
 
     return (
-        <div className={clsx('max-w-md')}>
-            <h1>{title}</h1>
-
-            <form onSubmit={handleSubmit(onSubmit)} className={clsx('flex', 'flex-col')}>
+        <div className='p-2 flex flex-col justify-center items-center w-full'>
+            <h1 className={clsx(
+                'text-2xl',
+            )}>{title}</h1>
+            <div className='w-1/4'>
+                <form onSubmit={handleSubmit(onSubmit)} className={clsx('flex', 'flex-col', 'gap-3')}>
                 {renderForm({register, errors})}
-                <input type='submit' disabled={isPending} title={isPending ? 'Submitting' : 'Submit'} />
+                    <input type='submit' disabled={status === 'pending'} value={status === 'pending' ? 'Submitting' : 'Submit'} className={clsx(
+                        'bg-mainGreen',
+                        'rounded-md',
+                        'cursor-pointer',
+                        'text-gray5',
+                        'p-2'
+                    )} />
                 {isSuccess ? <p>Success</p> : null}
                 {isError ? <p>Error submitting the form</p> : null}
                 {data ? <pre>{JSON.stringify(data, undefined, 4)}</pre> : null}
             </form>
+            </div>
         </div>
     )
 }

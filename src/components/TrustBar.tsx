@@ -1,6 +1,6 @@
 import Marquee from 'react-fast-marquee';
 
-type TrustBarProps = {
+export type TrustBarProps = {
     images: string[];
 };
 

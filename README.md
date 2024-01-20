@@ -2,6 +2,7 @@
 1. [Transfer the project to TypeScript](#transfer-to-typescript-implementation)
 2. [List component](#list-component-implementation)
 3. [Form Generator component](#form-generator-component-implementation)
+4. [Page Generator component](#page-generator-component-implementation)
 
 ## Complete the following tasks
 
@@ -128,7 +129,7 @@ This solution leverages the capabilities of React Query, Zod, React Hook Form an
 
     The FormGenerator component accepts a renderForm callback function as a prop. This function is responsible for rendering the form elements using the provided register function for input bindings and errors for displaying validation errors.
 
-The [MyForm.tsx](./src/components/MyForm.tsx) component utilizes the FormGenerator component, it creates a form with two fields: a required title field with a maximum character limit and a required body field with a maximum character limit.
+[MyForm.tsx](./src/components/MyForm.tsx) component utilizes the FormGenerator component, it creates a form with two fields: a required title field with a maximum character limit and a required body field with a maximum character limit.
 
 Validation errors are displayed for both fields if the input doesn't meet the criteria set by the validation schema.
 
@@ -183,6 +184,28 @@ const data = [
 ];
 
 ```
+
+#### Page Generator Component Implementation:
+
+Files:
+* [PageGenerator.tsx](./src/components/PageGenerator.tsx)
+* [MyPage.tsx](./src/components/MyPage.tsx)
+
+[PageGenerator.tsx](./src/components/PageGenerator.tsx) component is designed to dynamically generate web pages based on the input data it receives through props.
+
+The component dynamically renders sections and components.
+It uses a combination of **map** functions and **switch** statements to render components based on their types.
+The provided component types include '***Hero***', '***ItemsShowcase***', '***PanelShowcase***', '***TrustBar***', and '***ContactUsForm***'. You can add more layout types, component types, or even create your own components without modifying the core structure of the **PageGenerator** component.
+
+Overall, this **PageGenerator** component provides a flexible and reusable solution for generating web pages with different layouts and components dynamically.
+
+[MyPage.tsx](./src/components/MyPage.tsx) utilizes PageGenerator component to create a page based on the data prop, I used already created components:
+1. [Hero.tsx](./src/components/Hero.tsx)
+2. [ItemsShowcase.tsx](./src/components/ItemsShowcase.tsx)
+3. [PanelShowcase.tsx](./src/components/PanelShowcase.tsx)
+4. [TrustBar.tsx](./src/components/TrustBar.tsx)
+
+In addition, a new component [ContactUsForm.tsx](./src/components/ContactUsForm.tsx) has been created using [FormGenerator.tsx](./src/components/FormGenerator.tsx) just to make the page looks cool. 🤘
 
 ### Additional Requirements
 You will have to complete all of these for your task to be considered done.

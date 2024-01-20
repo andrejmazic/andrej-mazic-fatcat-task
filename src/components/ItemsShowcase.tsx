@@ -3,7 +3,7 @@ type ItemType = {
     description: string;
 }
 
-type ItemsShowcaseProps = {
+export type ItemsShowcaseProps = {
     items: ItemType[];
 };
 
@@ -12,7 +12,7 @@ export const ItemsShowcase = ({items}: ItemsShowcaseProps) => {
         <div className="flex justify-center items-center">
             <div className="grid grid-cols-2 gap-8 w-8/12">
                 {items.map(({title, description}) => (
-                    <div key={title} className="flex flex-col gap-2">
+                    <div key={title} className="flex flex-col gap-2 items-center">
                         <img
                             src="/media/checkmark.jpg"
                             width={25}

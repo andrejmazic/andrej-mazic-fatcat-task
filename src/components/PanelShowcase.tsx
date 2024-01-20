@@ -6,7 +6,7 @@ type PanelShowcaseItem = {
     image: string;
 };
 
-type PanelShowcaseProps = {
+export type PanelShowcaseProps = {
     items: PanelShowcaseItem[];
 };
 
