@@ -26,7 +26,7 @@ const cards = [
     {
         title: 'Create a Page Generator Component',
         text: 'Create a versatile React component for dynamic webpage construction, adapting to various layouts and components through received props.',
-        link: vscodeProjectLink,
+        link: `${vscodeProjectLink}/src/components/PageGenerator.tsx`,
     },
 ];
 
