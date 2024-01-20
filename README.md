@@ -4,7 +4,7 @@
 3. [Form Generator component](#form-generator-component-implementation)
 4. [Page Generator component](#page-generator-component-implementation)
 
-For each implementation (except the TypeScript transition), there's a **Demo** button for you to preview it right away. 😎 You can find it on the landing page within the task's cards. For this purpose, I implemented a basic router using [React Router](https://www.npmjs.com/package/react-router-dom) library.
+For each task implementation (except the TypeScript transition), there's a **Demo** button for you to preview it right away. 😎 You can find it on the landing page within the task's cards. For this purpose, I implemented a basic router using [React Router](https://www.npmjs.com/package/react-router-dom) library.
 
 ## Complete the following tasks
 
