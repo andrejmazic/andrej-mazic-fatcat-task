@@ -4,6 +4,8 @@
 3. [Form Generator component](#form-generator-component-implementation)
 4. [Page Generator component](#page-generator-component-implementation)
 
+For each implementation (except the TypeScript transition), there's a **Demo** button for you to preview it right away. 😎 You can find it on the landing page within the task's cards. For this purpose, I implemented a basic router using [React Router](https://www.npmjs.com/package/react-router-dom) library.
+
 ## Complete the following tasks
 
 ### Transfer the project to TypeScript
@@ -212,6 +214,8 @@ You will have to complete all of these for your task to be considered done.
 
 * Follow the eslint and prettier rules set by the project; you must not use any ts-ignore or disable eslint.
 * It must contain a Readme.md file that has instructions on how to run the project as well as a brief explanation of how you have implemented these features. In the project, there is already a Readme.md file present feel free to override it completely.
+<!-- TODO Please add RUN quide  -->
+
 * Your code must follow the latest rules and conventions
 * You have to have checks for typescript and eslint that disallow you to commit any changes that cause errors.
 * There should be no TypeScript or Eslint errors in your code.

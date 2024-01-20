@@ -34,9 +34,10 @@ const FormGenerator = ({title, validationSchema, formOnSubmit, renderForm}: Form
         <div className='p-2 flex flex-col justify-center items-center w-full'>
             <h1 className={clsx(
                 'text-2xl',
+                'font-bold'
             )}>{title}</h1>
             <div className='w-1/4'>
-                <form onSubmit={handleSubmit(onSubmit)} className={clsx('flex', 'flex-col', 'gap-3')}>
+                <form onSubmit={handleSubmit(onSubmit)} className={clsx('flex', 'flex-col', 'gap-1')}>
                 {renderForm({register, errors})}
                     <input type='submit' disabled={status === 'pending'} value={status === 'pending' ? 'Submitting' : 'Submit'} className={clsx(
                         'bg-mainGreen',
@@ -45,9 +46,26 @@ const FormGenerator = ({title, validationSchema, formOnSubmit, renderForm}: Form
                         'text-gray5',
                         'p-2'
                     )} />
-                {isSuccess ? <p>Success</p> : null}
-                {isError ? <p>Error submitting the form</p> : null}
-                {data ? <pre>{JSON.stringify(data, undefined, 4)}</pre> : null}
+                    {isSuccess ? (
+                        <div key={title} className="flex flex-col gap-2 items-center">
+                            <img
+                                src="/media/cool-checkmark.svg"
+                                width={50}
+                                alt="Checkmark"
+                            />
+                        </div>
+                    ) : null}
+                    {isError ? <p>Error submitting the form</p> : null}
+                    {data ? (
+                        <div>
+                            <h2>Server response:</h2>
+                            <pre className={clsx(
+                                'bg-white',
+                                'p-4',
+                                'rounded-md'
+                            )}>{JSON.stringify(data, undefined, 4)}</pre>
+                        </div>
+                    ) : null}
             </form>
             </div>
         </div>

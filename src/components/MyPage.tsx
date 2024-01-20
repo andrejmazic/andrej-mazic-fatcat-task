@@ -16,7 +16,7 @@ const PageData: Section[] = [
     },
     {
         type: 'layoutSection',
-        props: ['w-full', 'p-5', 'rounded-md'],
+        props: ['w-full', 'p-5', 'rounded-md', 'mt-12'],
         components: [
             {
                 type: 'ItemsShowcase',
@@ -46,7 +46,7 @@ const PageData: Section[] = [
     {
         type: 'layoutSection',
         title: 'Meet our FatCat team!',
-        props: ['w-full', 'p-5', 'flex', 'flex-col', 'gap-10'],
+        props: ['w-full', 'p-5', 'flex', 'flex-col', 'gap-10', 'mt-12'],
         components: [
             {
                 type: 'PanelShowcase',
@@ -90,7 +90,7 @@ const PageData: Section[] = [
     {
         type: 'layoutSection',
         title: 'Slide into Our DMs, Tech Maestro!',
-        props: ['w-full', 'flex', 'flex-col', 'gap-4'],
+        props: ['w-full', 'flex', 'flex-col', 'gap-5', 'mt-12'],
         components: [
             {
                 type: 'ContactUsForm',
@@ -113,7 +113,6 @@ const PageData: Section[] = [
 ]
 
 const PageProps: PageGeneratorProps = {
-    title: 'FatCat Cool Page',
     data: PageData,
 }
 

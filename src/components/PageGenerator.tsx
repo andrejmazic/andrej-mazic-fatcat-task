@@ -31,9 +31,7 @@ const PageGenerator = ({title, data}: PageGeneratorProps) => {
         <div className={clsx(
             'flex',
             'flex-col',
-            'items-center',
-            'gap-4',
-            'pt-4'
+            'bg-cream'
         )}>
             <h1 className={clsx(
                 'text-4xl',

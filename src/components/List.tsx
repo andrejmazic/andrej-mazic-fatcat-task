@@ -26,13 +26,17 @@ const List = () => {
         <section className={clsx(
             'bg-cream',
             'flex',
+            'flex-col',
             'justify-center',
             'items-center',
-            'p-8',
-            'sm:p-16'
+            'gap-5',
+            'p-5',
         )}>
+            <h1 className={clsx(
+                'text-2xl',
+                'font-bold'
+            )}>User list</h1>
             <div>
-                {/* TODO Make loading cool */}
                 {loading && <h3>Loading...</h3>}
                 {/* TODO Make empty state for list */}
                 {error ? (

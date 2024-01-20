@@ -36,13 +36,14 @@ const MyForm = () => {
             'flex',
             'justify-center',
             'items-center',
-            'h-screen'
+            'h-screen',
+            'bg-cream'
         )}>
             {/* TODO Try to make generic form field input https://www.freecodecamp.org/news/react-form-validation-zod-react-hook-form/ */}
             <FormGenerator title='Add Post' validationSchema={validationSchema} formOnSubmit={submitForm} renderForm={({register, errors}) => (
                 <>
                     <input {...register('title')} placeholder='Title' className={clsx(
-                        'bg-gray5 p-2 rounded-md'
+                        'bg-white p-2 rounded-md'
                     )} />
                     <p className={clsx(
                         'text-mainRed',
@@ -51,7 +52,7 @@ const MyForm = () => {
 
                     )}>{errors.title?.message}</p>
                     <textarea {...register('body')} placeholder='Body' className={clsx(
-                        'bg-gray5 p-2 rounded-md'
+                        'bg-white p-2 rounded-md'
                     )} />
                     <p className={clsx(
                         'text-mainRed',

@@ -4,9 +4,10 @@ type CardProps = {
     title: string;
     text: string;
     link: string;
+    route?: string;
 };
 
-export const Card = ({title, text, link}: CardProps) => (
+export const Card = ({title, text, link, route}: CardProps) => (
     <div
         className={clsx(
             'flex',
@@ -45,5 +46,18 @@ export const Card = ({title, text, link}: CardProps) => (
             Read more
             <img src="/media/landing/arrow-purple.svg" alt="" />
         </a>
+        {route ? (<a
+            href={route}
+            className={clsx(
+                'mt-auto',
+                'flex',
+                'items-center',
+                'text-primary',
+                'gap-2.5'
+            )}
+        >
+            Demo
+            <img src="/media/landing/play.svg" alt="" />
+        </a>) : null}
     </div>
 );

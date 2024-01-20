@@ -23,7 +23,7 @@ const ContactUsForm = () => {
             <FormGenerator validationSchema={validationSchema} formOnSubmit={submitForm} renderForm={({register, errors}) => (
                 <>
                     <input {...register('subject')} placeholder='Subject' className={clsx(
-                        'bg-gray5 p-2 rounded-md'
+                        'bg-white p-2 rounded-md'
                     )} />
                     <p className={clsx(
                         'text-mainRed',
@@ -32,7 +32,7 @@ const ContactUsForm = () => {
 
                     )}>{errors.subject?.message}</p>
                     <textarea {...register('message')} placeholder='Message' className={clsx(
-                        'bg-gray5 p-2 rounded-md'
+                        'bg-white p-2 rounded-md'
                     )} />
                     <p className={clsx(
                         'text-mainRed',

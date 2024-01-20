@@ -12,9 +12,9 @@ const UserCard = ({id, name, username, email, phone}: User) => {
     return (
         <div>
             <div className={clsx(
-                'bg-gray20',
+                'bg-white',
                 'rounded-md',
-                'p-2'
+                'p-5',
             )}>
                 <h3>ID: {id}</h3>
                 <p>Name: {name}</p>
