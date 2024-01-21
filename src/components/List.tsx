@@ -38,7 +38,6 @@ const List = () => {
             )}>User list</h1>
             <div>
                 {loading && <h3>Loading...</h3>}
-                {/* TODO Make empty state for list */}
                 {error ? (
                     <p>Something went wrong: {error.message}</p>
                 ) : (

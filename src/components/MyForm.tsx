@@ -39,7 +39,6 @@ const MyForm = () => {
             'h-screen',
             'bg-cream'
         )}>
-            {/* TODO Try to make generic form field input https://www.freecodecamp.org/news/react-form-validation-zod-react-hook-form/ */}
             <FormGenerator title='Add Post' validationSchema={validationSchema} formOnSubmit={submitForm} renderForm={({register, errors}) => (
                 <>
                     <input {...register('title')} placeholder='Title' className={clsx(

@@ -19,7 +19,6 @@ const submitForm = async (data: FormDataTypes) => {
 const ContactUsForm = () => {
     return (
         <div>
-            {/* TODO Try to make generic form field input https://www.freecodecamp.org/news/react-form-validation-zod-react-hook-form/ */}
             <FormGenerator validationSchema={validationSchema} formOnSubmit={submitForm} renderForm={({register, errors}) => (
                 <>
                     <input {...register('subject')} placeholder='Subject' className={clsx(
