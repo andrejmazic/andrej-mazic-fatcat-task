@@ -26,7 +26,7 @@ export type PageGeneratorProps = {
     data: Section[];
 }
 
-const PageGenerator = ({title, data}: PageGeneratorProps) => {
+const PageGenerator = ({title, data}: any) => {
     return (
         <div className={clsx(
             'flex',
