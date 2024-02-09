@@ -8,6 +8,8 @@ const List = () => {
     const [users, setUsers] = useState<User[]>([]);
     const [error, setError] = useState<{message: string} | null>(null);
     const [loading, setLoading] = useState(true);
+    
+    const a = 'test';
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
